@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+.post {
+    background-image: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1493&q=80");
+  width: 892px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+.post .left {
+  width: 550px;
+  height: 553px;
+  background: #CC3843;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+}
+.post .left .wordmark {
+  opacity: 0.2;
+  transform: rotate(-90deg) scale(1.2);
+  margin-left: -90px;
+}
+.post .right {
+  width: 570px;
+  height: 479px;
+  background: #0C1F2C;
+  position: absolute;
+  left: 9%;
+  transform: translateX(50%);
+  border-radius: 23px;
+}
+.post .right .helmet {
+  position: absolute;
+  top: 50%;
+  transform: translate(-38%, -50%);
+}
+.post .right .productInfo {
+  width: 300px;
+  height: 300px;
+  margin: 75px 0 0 285px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+.post .right .productInfo h1 {
+  font-weight: 800;
+  line-height: 46px;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.post .right .productInfo h2 {
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: 1.6px;
+  margin-bottom: 30px;
+}
+.post .right .productInfo .details {
+  height: 145px;
+}
+.post .right .productInfo .details .size,
+.post .right .productInfo .details .durability {
+  width: 50%;
+  float: left;
+}
+.post .right .productInfo .details .size {
+  border-right: 1px solid #CB1F40;
+  padding: 30px 0;
+}
+.post .right .productInfo .details .durability {
+  text-align: center;
+}
+.post .right .productInfo .details .durability h4 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.post .right .productInfo button {
+  height: 48px;
+  background: #CB2140;
+  border-radius: 90px;
+  font-weight: 300;
+  line-height: 35px;
+  font-size: 14px;
+  padding: 0 24px;
+  color: #fff;
+}
+.post .right .productInfo i.fav {
+  font-size: 12px;
+  margin: 0 12px 0 24px;
+  color: #CB2140;
+}
+.post .right .productInfo a {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.3;
+  text-decoration: none;
+}
+.post .right .productInfo h3 {
+  width: 80px;
+  height: 80px;
+  font-weight: 300;
+  line-height: 80px;
+  font-size: 16px;
+  margin-left: 30px;
+  position: relative;
+}
+.post .right .productInfo h3:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #CB1F40;
+  border-top-color: transparent;
+  transform: rotate(-45deg) translate(-50%, -50%);
+}
+.post .right .productInfo h4 {
+  font-weight: bold;
+  line-height: normal;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+.post .right .productInfo p {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  line-height: normal;
+  text-align: center;
+  font-weight: 300px;
+  line-height: 28px;
+  font-size: 14px;
+  border-radius: 50%;
+  transition: 0.3s linear;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.post .right .productInfo p:hover {
+  border: 1px solid #CB1F40;
+}
+.post .right .productInfo p:nth-of-type(1) {
+  border: 1px solid #CB1F40;
+}
+.slider {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  line-height: 70px;
+  text-align: center;
+  margin-left: -30px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+  color: #CB1F40;
+  cursor: pointer;
+}
+.slider:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 576px) {
+  .post {
+    transform: rotate(90deg) scale(0.7) translate(calc(50% - 25vh), 50%);
+    position: static;
+  }
+}

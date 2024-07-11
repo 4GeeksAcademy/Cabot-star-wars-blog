@@ -6,6 +6,11 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+import StarshipsDescription from "./views/starshipsDescription";
+import {PlanetDescription} from "./views/planetDescription";
+import {CharacterDescription} from "./views/characterDescription";
+import {Welcome} from "./views/welcome";
+import { Connection } from "./views/connection";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -26,6 +31,12 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="/character-description/:id" element={<CharacterDescription />} />
+						<Route path="/planet-description/:id" element={<PlanetDescription />} />
+						<Route path="/starships-description/:id" element={<StarshipsDescription />} />
+						<Route path="/welcome" element={<Welcome />} />
+						<Route path="/connection" element={<Connection />} />
+						
 					</Routes>
 					<Footer />
 				</ScrollToTop>
