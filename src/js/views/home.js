@@ -1,7 +1,7 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import {Welcome} from "./welcome"
+import { Welcome } from "./welcome"
 
 
 export const Home = () => (

@@ -1,19 +1,19 @@
 import React,{useState, useEffect, useContext} from "react";
-import {Context} from "react";
+import { Context } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-import "../../styles/descriptioncard.css";
+import "../../styles/descriptionCard.css";
 
 export const PlanetDescription = () => {
-    const[planet, setPlanet] = useState({})
-    const {id} = useParams()
+    const[planet, setPlanet] = useState({});
+    const {id} = useParams();
     useEffect(() => {
         async function getPlanet(){
-            const response = await fetch("https://www.swapi.tech/api/planets/"+id)
-            const data = await response.json()
-            setPlanet(data.result.properties)
-        }
+            const response = await fetch("https://www.swapi.tech/api/planets/"+id);
+            const data = await response.json();
+            setPlanet(data.result.properties);
+        };
         getPlanet()
         console.log(planet);
     },[]);

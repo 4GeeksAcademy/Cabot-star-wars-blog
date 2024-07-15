@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-export const characterCard = () => {
+export const CharacterCard = () => {
     const[characters, setCharacters] = useState([])
     const{store, actions} = useContext(Context)
 
@@ -28,14 +28,14 @@ export const characterCard = () => {
     return (
         <div className="cardbg d-flex col-10 overflow-auto mt-5 mx-auto">
             {characters ?.map ((character,index)=> (
-                <div className="card" style={{minWidth:"22rem"}} key={index}>
+                <div className="card bg-dark" style={{minWidth:"22rem", paddingRight:"10px"}} key={index}>
                     <img src={`https://starwars-visualguide.com/assets/img/characters/${character.uid}.jpg`}/>
                     <div className="card-body">
-                        <h5 className="card-title">{character.name}</h5>
+                        <h5 className="card-title text-warning">{character.name}</h5>
                     </div>
                     <div className="Cardbtn">
-                    <Link className="secondpagebutton" to={"/character-description/" + character.uid}>:round_pushpin:Learn More</Link>
-                        <button  className="secondpagebutton" onClick={() => { handleFavorite(character.name) }}> :love_letter:Favorite </button>
+                    <Link className="secondpagebutton text-warning p-5" to={"/character-description/" + character.uid}>About</Link>
+                        <button  className="secondpagebutton text-warning p-5 bg-dark" onClick={() => { handleFavorite(character.name) }}>Favorite</button>
                     </div>
                 </div>
             ))}

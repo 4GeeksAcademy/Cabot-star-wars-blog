@@ -6,10 +6,10 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-import StarshipsDescription from "./views/starshipsDescription";
-import {PlanetDescription} from "./views/planetDescription";
-import {CharacterDescription} from "./views/characterDescription";
-import {Welcome} from "./views/welcome";
+import { StarshipsDescription } from "./views/starshipsDescription";
+import { PlanetDescription } from "./views/planetDescription";
+import { CharacterDescription } from "./views/characterDescription";
+import { Welcome } from "./views/welcome";
 import { Connection } from "./views/connection";
 
 import { Navbar } from "./component/navbar";

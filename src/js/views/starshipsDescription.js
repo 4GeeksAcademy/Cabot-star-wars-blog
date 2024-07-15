@@ -1,20 +1,20 @@
 import React,{useState, useEffect, useContext} from "react";
-import {Context} from "react";
+import { Context } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-import "../../styles/descriptioncard.css";
+import "../../styles/descriptionCard.css";
 
 export const StarshipsDescription = () => {
-    const[starships, setStarships] = useState({})
-    const {id} = useParams()
+    const[starships, setStarships] = useState({});
+    const {id} = useParams();
     useEffect(() => {
         async function getStarships(){
-            const response = await fetch("https://www.swapi.tech/api/starships/"+id)
-            const data = await response.json()
-            setStarships(data.result.properties)
+            const response = await fetch("https://www.swapi.tech/api/starships/"+id);
+            const data = await response.json();
+            setStarships(data.result.properties);
         }
-        getStarships()
+        getStarships();
         console.log(starships);
     },[]);
     return (
